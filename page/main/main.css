@@ -92,23 +92,3 @@ main section div.news {
 main section div.news:hover {
     border: solid 0.2rem var(--corPrimaria);
 }
-
-footer {
-    padding: 1rem;
-    color: var(--corFundoSecundaria);
-    display: flex;
-    flex-direction: row;
-}
-
-footer section#creator {
-    width: 25%;
-}
-
-footer section img {
-    height: 50%;
-}
-
-footer blockquote {
-    width: 75%;
-    align-content: center;
-}

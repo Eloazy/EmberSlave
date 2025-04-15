@@ -1,0 +1,8 @@
+body {
+	background-color: rgb(45, 45, 45);
+}
+body ul, li {
+	display: flex;
+	justify-content: center;
+	margin: 0 15vw 0 15vw;
+}
