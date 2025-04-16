@@ -4,24 +4,30 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./user.css">
+	<!-- <meta http-equiv="refresh" content="1"> -->
 	<script type="text/javascript" src="./user.js"></script>
-	<script type="text/javascript">user(false, false)</script>
+	
 	<title>ES - User</title>
 </head>
 <body>
 	<div id="frame">
 		<div id="text">
-			<span>Name: [loading]</span>
+			<span id="titleImage">[loading]y</span>
+			<span></span>
+			<span></span>
 		</div>
 		<div id="img">
-			<img src="https://th.bing.com/th/id/R.316a6345d7fcd7ee1cd6251dcefb176e?rik=Z5KbcfJbqQKySg&pid=ImgRaw&r=0" height="250	">
+			<img id="profileImage" src="https://www.default.com">
 		</div>
 	</div>
-	
-	<h1>Image: [loading]</h1>
-	<h1>Life: [loading]</h1>
-	<h1>Faction: [loading]</h1>
-	<button onclick="user(true, false)">manual check</button>
-	<button onclick="user(true, true)">update your data</button>
+	<h1 id="life">Life: [loading]</h1>
+	<h1 id="description">Description: [loading]</h1>
+	<h1 id="faction">Faction: [loading]</h1>
+	<h1 id="job">Job: [loading]</h1>
+	<h1 id="la">LA: [loading]</h1>
+	<script type="text/javascript">user().finally(() => {
+		update()
+	})</script>
+	<script type="text/javascript" src="./update.js"></script>
 </body>
 </html>

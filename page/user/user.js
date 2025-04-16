@@ -1,7 +1,7 @@
-async function user(manualChecker, updateStatus) {
-	if (manualChecker !== true && localStorage.getItem('udt') !== null) {return 0}
+async function user() {
 	console.time('response')
 	console.groupCollapsed('system (debug)')
+	console.dir(document.location)
 	const response = await fetch('https://api.torn.com/v2/user?selections=profile', {
 		method: 'GET',
 		headers: {
@@ -15,9 +15,8 @@ async function user(manualChecker, updateStatus) {
 	console.groupEnd()
 	console.group('key Response')
 	console.timeEnd('response')
-	if(localStorage.getItem('udt') == null && updateStatus == false) {
-		localStorage.setItem('udt', btoa(await JSON.stringify(data)))
-	}
+	await localStorage.setItem('udt', btoa(await JSON.stringify(data)))
+	
 	if(data.player_id == undefined) {
 		console.error(`Key error || status ${response.status}`)
 	}
