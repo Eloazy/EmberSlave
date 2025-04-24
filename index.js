@@ -1,4 +1,7 @@
-import { EmbedBuilder, WebhookClient } from 'discord.js'
+var openBrowser = require('react-dev-utils/openBrowser');
+openBrowser('https://stackoverflow.com/');
+
+/*import { EmbedBuilder, WebhookClient } from 'discord.js'
 import express from 'express'
 import path from 'path'
 
@@ -40,3 +43,4 @@ app.listen(1025, () => {
 	console.log("DO NOT CLOSE THIS WHILE USING THE API")
 	console.log("---------------------")
 })
+*/
