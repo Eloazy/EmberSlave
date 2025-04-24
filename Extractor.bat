@@ -47,5 +47,4 @@ for %%a in ("*.rar") do (
 :end_script
 echo.
 echo Process completed!
-start pre_install.bat
 endlocal
